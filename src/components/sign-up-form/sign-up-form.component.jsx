@@ -41,7 +41,7 @@ const SignUpForm = () => {
                 resetFirmFields();
                
             }catch(error){
-                if(error.code == 'auth/email-already-in-use'){
+                if(error.code === 'auth/email-already-in-use'){
                     alert('email already in use')
                 }else{
                   console.log('user error', error)  
@@ -100,7 +100,7 @@ export default  SignUpForm
 
 
 // option 2
-{/* <FormInput type="text"
+/* <FormInput type="text"
 label="Display Name"
 inputOptions = {{
     type:'text',
@@ -108,4 +108,4 @@ inputOptions = {{
     onChange:handleChange, 
     name:"displayName" ,
     value:displayName
-}} */}
+}} */
